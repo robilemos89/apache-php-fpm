@@ -24,7 +24,7 @@ services:
     expose:
       - "3306"
     volumes:
-      - ../mysql:/var/lib/mysql
+      - /var/lib/mysql
     env_file:
       - database.env
   phpmyadmin:
