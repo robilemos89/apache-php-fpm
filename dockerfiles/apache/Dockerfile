@@ -14,6 +14,7 @@ RUN echo "ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://php:9000/var/www/html/$1" > /
 RUN echo "DirectoryIndex index.htm /index.htm /index.html index.html /index.php index.php" >> /etc/httpd/conf.modules.d/02-php.conf
 # Apache settings
 COPY httpd.conf /etc/httpd/conf/httpd.conf
+<<<<<<< HEAD
 # Copy apache startup script to /usr/local/bin
 COPY apache2-foreground /usr/local/bin/
 
@@ -21,4 +22,9 @@ COPY apache2-foreground /usr/local/bin/
 EXPOSE 80 443
 
 # Finally, run httpd entrypoint
+=======
+COPY apache2-foreground /usr/local/bin/
+
+EXPOSE 80
+>>>>>>> 723b1debf6085dfa4079a0b4320714fe016d6dcd
 CMD ["apache2-foreground"]
