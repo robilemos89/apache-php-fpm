@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+rm -f /var/run/httpd/httpd.pid
+
+exec httpd -DFOREGROUND
