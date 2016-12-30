@@ -17,6 +17,8 @@ services:
       - mysql
     expose:
       - "9000"
+    environment:
+      - APP_ENV=development
   mysql:
     image: mariadb:latest
     ports:
